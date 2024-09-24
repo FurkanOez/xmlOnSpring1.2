@@ -31,7 +31,7 @@ public class LoadDataService {
         //arraylist attr tutan yeri
 
         try {
-            File xmlFile = new File("C:/Users/foez/Desktop/mert.xml");
+            File xmlFile = new File("/path/to/your/file");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = dbFactory.newDocumentBuilder();
             Document document = documentBuilder.parse(xmlFile);
