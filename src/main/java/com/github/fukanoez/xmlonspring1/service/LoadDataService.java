@@ -95,33 +95,3 @@ public class LoadDataService {
             }
         }
     }
-
-
-
-
-
-
-
-
-// /loadData  Controller olustur ve bu datalari
-//string builder nasil calisir bak
-//print yerine string builder yap
-
-
-
-
-//attr diye yeni bir class = ok
-//attr icinde  name ve value adinda iki field = ok
-//bir tane attr classini tutan bir array list = ok
-//attr class icin getter setter = ok
-//StringBuilder appenleri bir obje haline getir. (örnek: objeadi = sb1.append("    Attribute: ").append(attr.getNodeName()).append(" = ").append(attr.getNodeValue());)
-//attr classina toString yaz = ok
-
-
-//duckdb tablo olustur
-//4 tane string field = ok
-//1. field UUID olacak bunu generate et(java ile) = ok
-//2.field attrName = ok
-//3.field attrValue = ok
-//4.field attrID = ok
-//for döngüsüyle listenin icinde kosup, attrleri dbye ekle.
