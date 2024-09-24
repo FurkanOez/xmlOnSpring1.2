@@ -15,7 +15,7 @@ import java.util.*;
 public class UuidService {
 
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:duckdb:/Users/foez/IdeaProjects/xmlOnSpring1/furkan");
+        return DriverManager.getConnection("jdbc:duckdb:/path/to/your/file");
     }
 
     public HashSet<Attribute> viewData(File folder) {
@@ -39,7 +39,7 @@ public class UuidService {
     private HashSet<Attribute> processXMLFile(File file) {
         HashSet<Attribute> attributes = new HashSet<>();
         try {
-            //File xmlFile = new File("C:/Users/foez/Desktop");
+            //File xmlFile = new File("/path/to/your/file");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = dbFactory.newDocumentBuilder();
             Document document = documentBuilder.parse(file);
@@ -114,7 +114,7 @@ public class UuidService {
                 .findFirst();
 
         if (!correlationsIDOpt.isPresent()) {
-            return "Error: CorrelationsID bulunamadı.";
+            return "Error: CorrelationsID not found.";
         }
 
         Attribute correlationsID = correlationsIDOpt.get();
@@ -208,36 +208,3 @@ public class UuidService {
 
         return result;
     }
-
-
-//    public String SearchByKey() throws SQLException {
-//        try (Connection conn = getConnection();) {
-//
-//        }
-//        Statement stmt = conn.createStatement();
-//        String sql = "SELECT * FROM attrs";
-//        String query = "SELECT * FROM attrs WHERE attrName = ? AND attrValue = ?";
-//
-//    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Search contoller olustur /search kullansin
-//Request parameter olarak key ve value adinda iki tane alan alsin bunlari servise göndersin
-//db de select query at
-//key ve value arat
