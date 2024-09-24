@@ -29,7 +29,7 @@ public class SearchController {
 //    }
 
     @GetMapping("/viewData")
-    public HashSet<Attribute> viewData(@RequestParam(value = "folderPath", defaultValue = "C:/Users/foez/Desktop")String folderPath) {
+    public HashSet<Attribute> viewData(@RequestParam(value = "folderPath", defaultValue = "/path/to/your/file")String folderPath) {
         File folder = new File(folderPath);
 
         System.out.println("Folder exists: " + folder.exists());
